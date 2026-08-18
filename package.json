@@ -1,33 +1,19 @@
 {
   "name": "roof-estimator-monorepo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-
-"scripts": {
-  "client": "npm run dev --prefix client",
-  "server": "nodemon --prefix server server/src/index.js",
-  "install-client": "npm install --prefix client",
-  "install-server": "npm install --prefix server",
-  "dev": "concurrently \"npm run server\" \"npm run client\"",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "autoprefixer": "^10.5.4",
-    "concurrently": "^10.0.5",
-    "nodemon": "^3.1.14",
-    "postcss": "^8.5.26",
-    "tailwindcss": "^4.3.3"
+  "description": "Config-Driven Roof Estimator & Owner Panel",
+  "private": true,
+  "scripts": {
+    "server": "nodemon server/src/index.js",
+    "client": "npm run dev --prefix client",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "install-all": "npm install && npm run install-server && npm run install-client",
+    "seed": "npm run seed --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "mongoose": "^9.9.2",
-    "react-router-dom": "^7.18.2"
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
   }
 }

@@ -1,0 +1,14 @@
+// server/src/models/Lead.js
+import mongoose from 'mongoose';
+
+const LeadSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  phone: { type: String, required: true },
+  email: { type: String, required: true },
+  answers: { type: Map, of: mongoose.Schema.Types.Mixed, required: true },
+  estimate_low: { type: Number, required: true },
+  estimate_high: { type: Number, required: true },
+  config_version: { type: Number, required: true }
+}, { timestamps: true });
+
+export const Lead = mongoose.model('Lead', LeadSchema);
