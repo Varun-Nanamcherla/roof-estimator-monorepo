@@ -23,3 +23,9 @@ From the root directory:
 ```bash
 npm run install-server
 npm run install-client
+
+Public Estimator: https://your-frontend.vercel.app
+
+Owner Panel: https://your-frontend.vercel.app/admin
+
+Credentials: dale / roofing2026!
