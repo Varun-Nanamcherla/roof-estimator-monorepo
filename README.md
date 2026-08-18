@@ -24,8 +24,8 @@ From the root directory:
 npm run install-server
 npm run install-client
 
-Public Estimator: https://your-frontend.vercel.app
+Public Estimator: https://roof-estimator-monorepo-9cmw.vercel.app/
 
-Owner Panel: https://your-frontend.vercel.app/admin
+Owner Panel: https://roof-estimator-monorepo-9cmw.vercel.app/admin
 
 Credentials: dale / roofing2026!
