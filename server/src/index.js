@@ -13,6 +13,22 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/roofing_db';
 
+// server/src/index.js
+
+// Root welcoming route
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    message: 'Roofing Estimator API is running',
+    endpoints: {
+      publicConfig: '/api/config',
+      estimate: '/api/estimate',
+      adminConfig: '/api/admin/config',
+      adminLeads: '/api/admin/leads'
+    }
+  });
+});
+
 // 1. Middleware Setup
 app.use(cors({
   origin: true,
